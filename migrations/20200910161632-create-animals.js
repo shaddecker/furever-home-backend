@@ -9,33 +9,51 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       type: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      breed: {
         type: Sequelize.STRING
       },
       name: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       coatlength: {
         type: Sequelize.STRING
       },
       color: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       age: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       sex: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       status: {
+        allowNull: false,
         type: Sequelize.STRING
+      },
+      altered: {
+        type: Sequelize.STRING
+      },
+      altereddate: {
+        type: Sequelize.DATE,
+        defaultValue: new Date(),
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: new Date(),
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: new Date(),
       }
     });
   },
