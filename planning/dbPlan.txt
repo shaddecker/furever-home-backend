@@ -1,0 +1,26 @@
+
+Animals
+    Type of animal
+    name
+    color
+    coat length
+    breed
+    age
+    sex
+    status
+    altered
+
+Tests
+    Feline FLV
+    Feline ID
+    Canine Heartworm
+
+Vaccinations
+
+
+Adoption
+    adoptername
+    adopteraddress
+    adopterphone
+    adoptervet
+
