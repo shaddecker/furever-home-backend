@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Animals.hasMany(models.Tests, { foreignKey: "animalid" });
       Animals.hasMany(models.Adoptions, { foreignKey: "animalid" });
+      Animals.hasMany(models.Vaccinations, { foreignKey: "animalid" });
     }
   };
   Animals.init({
