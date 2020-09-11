@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Animals.hasMany(models.Tests, { foreignKey: "animalid" });
-      
+      Animals.hasMany(models.Adoptions, { foreignKey: "animalid" });
     }
   };
   Animals.init({
@@ -23,8 +23,9 @@ module.exports = (sequelize, DataTypes) => {
     age: DataTypes.STRING,
     sex: DataTypes.STRING,
     status: DataTypes.STRING,
-    altered: DataTypes.STRING,
+    altered: DataTypes.BOOLEAN,
     altereddate: DataTypes.DATE,
+    notes: DataTypes.TEXT
   }, {
     sequelize,
     modelName: 'Animals',

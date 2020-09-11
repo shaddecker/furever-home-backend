@@ -7,7 +7,7 @@ const TestsModel = require("../models").Tests;
 router.get("/profile/:id", async (req, res) => {
   let animal = await AnimalModel.findByPk(req.params.id, {
      include: TestsModel,
-     attributes: ["type", "felinefiv","felineid","canineheartworm"],
+    //  attributes: ["animalid","felinefiv","felineid","canineheartworm"],
   });
   res.json({ animal });
 });
