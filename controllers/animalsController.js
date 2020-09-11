@@ -1,13 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const AnimalModel = require("../models").Animal;
-
+const AnimalModel = require("../models").Animals;
+const TestsModel = require("../models").Tests;
 
 // GET Animal PROFILE
 router.get("/profile/:id", async (req, res) => {
   let animal = await AnimalModel.findByPk(req.params.id, {
-    //  include: UserModel,
-    //  attributes: ["name", "id"],
+     include: TestsModel,
+     attributes: ["type", "felinefiv","felineid","canineheartworm"],
   });
   res.json({ animal });
 });

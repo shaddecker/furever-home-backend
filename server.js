@@ -33,8 +33,8 @@ app.get("/", (req, res) => {
   res.json({ message: "express api app is working" });
 });
 
-app.use("/api/auth", require("./controllers/authController.js"));
-app.use("/api/users", require("./controllers/usersController.js"));
+// app.use("/api/auth", require("./controllers/authController.js"));
+// app.use("/api/users", require("./controllers/usersController.js"));
 app.use("/api/animals", require("./controllers/animalsController.js"));
 
 app.listen(process.env.PORT, () => {
