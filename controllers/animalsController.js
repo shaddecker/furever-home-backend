@@ -2,13 +2,15 @@ const express = require("express");
 const router = express.Router();
 const AnimalModel = require("../models").Animals;
 const TestsModel = require("../models").Tests;
+const VaccinationsModel = require("../models").Vaccinations;
+const AdoptionsModel = require("../models").Adoptions;
 
 // GET Animal PROFILE
-router.get("/profile/:id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   let animal = await AnimalModel.findByPk(req.params.id, {
-     include: TestsModel,
-    //  attributes: ["animalid","felinefiv","felineid","canineheartworm"],
+     include: [TestsModel,VaccinationsModel,AdoptionsModel]
   });
+  console.log(animal);
   res.json({ animal });
 });
 
@@ -18,7 +20,8 @@ router.get("/profile/:id", async (req, res) => {
 //   res.json({ animals });
 // });
 router.get("/", async (req, res) => {
-  let animals = await AnimalModel.findAll();
+  let animals = await AnimalModel.findAll(
+    {include: [TestsModel,VaccinationsModel,AdoptionsModel]});
   res.json({ animals });
 });
 
