@@ -14,11 +14,6 @@ router.get("/:id", async (req, res) => {
   res.json({ animal });
 });
 
-// GET ALL Animals
-// router.get("/", async (req, res) => {
-//   let animals = await AnimalModel.findAll({include: SongModel});
-//   res.json({ animals });
-// });
 router.get("/", async (req, res) => {
   let animals = await AnimalModel.findAll(
     {include: [TestsModel,VaccinationsModel,AdoptionsModel]});
@@ -26,8 +21,11 @@ router.get("/", async (req, res) => {
 });
 
 // CREATE A NEW Animal
-router.post("/", async (req, res) => {
+router.post("/newanimal", async (req, res) => {
   let animal = await AnimalModel.create(req.body);
+  let vac = await VaccinationsModel.create({animalid:animal.id});
+  let test = await TestsModel.create({animalid:animal.id});
+  let adoptions = await AdoptionsModel.create({animalid:animal.id});
   res.json({ animal });
 });
 
