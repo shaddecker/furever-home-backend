@@ -16,11 +16,15 @@ Tests
     Canine Heartworm
 
 Vaccinations
-
+    dog combo
+    cat combo
+    rabies
+    
 
 Adoption
-    adoptername
-    adopteraddress
-    adopterphone
-    adoptervet
+    fullname
+    address
+    phone
+    vet
+    vetemail
 

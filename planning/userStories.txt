@@ -3,6 +3,9 @@ as an employee...
 2. I should be able to update the data on any animal in the system
 3. I should be able to view a list of all animals
 4. I should be able to view one animals profile at a time
+5. I should be able to view and update vaccination records
+6. I should be able to view and updated test records
+7. I should be able to view and updated adoption records
 
 
 as an adopter...
