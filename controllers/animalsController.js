@@ -20,6 +20,8 @@ router.get("/", async (req, res) => {
   res.json({ animals });
 });
 
+
+
 // CREATE A NEW Animal
 router.post("/newanimal", async (req, res) => {
   let animal = await AnimalModel.create(req.body);
