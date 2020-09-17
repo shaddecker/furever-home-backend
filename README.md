@@ -21,7 +21,7 @@ as an adopter...
 
 ## How It Was Designed
 This app has a home page as the landing point.  From there users can select from the available menu options.
-![Menu](/planning/menu.png "Menu Options")
+![Menu](/planning/menu.PNG) "Menu Options"
 
 "AllAnimals" - gives you a list of all animals with records at the shelter. On this page you will be able to add a new animal or click on one of the listed animal's names to go to a details page.
 "Adopt!" - gives the visitor the option of filling out an adoption form (not yet deployed)
