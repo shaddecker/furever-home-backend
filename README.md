@@ -35,3 +35,4 @@ This project was bootstrapped with Create React App. React components used:
 * axios
 * react-router-dom
 * react-spreadsheet-grid
+* Postgres 4
