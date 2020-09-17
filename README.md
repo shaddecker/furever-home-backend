@@ -32,6 +32,6 @@ This app has a home page as the landing point.  From there users can select from
 ## Technical Stuff
 This project was bootstrapped with Create React App. React components used:
 
-axios
-react-router-dom
-react-spreadsheet-grid
+* axios
+* react-router-dom
+* react-spreadsheet-grid
